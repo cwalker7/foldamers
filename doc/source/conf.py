@@ -14,18 +14,19 @@
 #
 import os
 import sys
-sys.path.insert(0,os.path.abspath('../../src'))
+sys.path.insert(0, os.path.abspath('../../src'))
+
 
 # -- Project information -----------------------------------------------------
 
 project = 'foldamers'
-copyright = '2019, Research group of Michael R. Shirts'
-author = 'Garrett A. Meek, Lenny T. Fobe, Michael R. Shirts'
+copyright = '2019, Shirts research group'
+author = 'Shirts research group'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = '0.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -41,6 +42,10 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.imgmath',
+    'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
 ]
@@ -117,7 +122,7 @@ latex_elements = {
 
     # The font size ('10pt', '11pt' or '12pt').
     #
-    'pointsize': '12pt',
+    # 'pointsize': '10pt',
 
     # Additional stuff for the LaTeX preamble.
     #
@@ -126,8 +131,6 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
-
-    'extraclassoptions': 'openany,twoside'
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -135,7 +138,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'foldamers.tex', 'foldamers Documentation',
-     'Garrett A. Meek, Lenny T. Fobe, Michael R. Shirts', 'manual'),
+     'Shirts research group', 'manual'),
 ]
 
 
@@ -185,3 +188,8 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+# -- Options for todo extension ----------------------------------------------
+
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
