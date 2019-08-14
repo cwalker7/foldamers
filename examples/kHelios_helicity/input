@@ -1,5 +1,5 @@
-inputhelix test.pdb
-helixout_name kHelix.test.pdb.out
+inputhelix temp_pitch.pdb
+helixout_name kHelix.out
 coord_type 1
 num_grid 360
 natoms 8
